@@ -12,8 +12,3 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-//When building your function:
-
-//Assume your users will watch exactly two movies
-//Don't make your users watch the same movie twice
-//Optimize for runtime over memory
