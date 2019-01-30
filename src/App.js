@@ -115,7 +115,7 @@ class App extends Component {
             </div>
           </section>
           <section id="blog">
-            <div>
+            <div class="blog-div">
             <h1 class="header">Blog</h1>
                 <div class="blog-content-div">
                   <div class="main-blog-article">
@@ -149,7 +149,7 @@ This is because when you assign the second variable to the first, you are actual
 
           <section id="contact">
             <div id="contact-container">
-              <div class="content-container">
+              <div class="contact-content-container">
                 <div class= "contactInfoBox">
                   <div class="contactMainTextDiv">
                   <h1>Get in Touch</h1>
