@@ -4,11 +4,20 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "dependencies": {
+    "react": "^16.7.0",
+    "react-anchor-link-smooth-scroll": "^1.0.11",
+    "react-dom": "^16.7.0",
+    "react-scripts": "^2.1.3",
+    "react-slideshow-image": "^1.0.10",
+    "react-start": "^1.1.2",
     "semantic-ui-react": "^0.84.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -19,5 +28,11 @@
   "bugs": {
     "url": "https://github.com/taylorjayoung/personal-site/issues"
   },
-  "homepage": "https://github.com/taylorjayoung/personal-site#readme"
+  "homepage": "https://github.com/taylorjayoung/personal-site#readme",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
