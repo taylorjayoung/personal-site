@@ -3,8 +3,38 @@ import './App.css';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Slideshow from './components/Carousel';
 import {Button, Checkbox, Form, Icon, TextArea} from 'semantic-ui-react'
+import Icons from './components/IconSet'
+import InterestIcons from './components/InterestIcons'
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      width: 0,
+      height: 0
+    }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
+  }
 
+  componentDidMount() {
+    console.log('MOUNT')
+    console.log('--------------------')
+    this.updateWindowDimensions()
+    window.addEventListener('resize', this.updateWindowDimensions)
+  }
+
+  componentWillUnmount(){
+    console.log('UNMOUNT')
+    console.log('--------------------')
+    window.removeEventListener('resize')
+  }
+
+  updateWindowDimensions(){
+    console.log('update window dimensions')
+    console.log('--------------------')
+    console.log(window.innerHeight, window.innerWidth)
+
+    this.setState({width: window.innerWidth, height: window.innerHeight})
+  }
 
   render() {
     return (
@@ -21,12 +51,9 @@ class App extends Component {
           <section id="home">
             <div class="home-div">
               <h1 class="header">Taylor J. Young, Developer </h1>
-              <h3 class="header-media-icons">
-                <a href="https://github.com/taylorjayoung?tab=repositories" target="_none"><Icon bordered inverted color='black' name='github big  link icon' /></a>
-                 <a href="https://www.linkedin.com/in/taylor-j-young/" target="_none"><Icon bordered inverted color='blue' name='linkedin big link icon' /></a>
-                 <a href="https://medium.com/@taylorjayoung" target="_none"><Icon bordered inverted color='black' name='medium big link icon' /></a>
-                 <a href="https://stackoverflow.com/users/10881188/t-young" target="_none"><Icon bordered inverted color='orange' name='stack overflow big link icon' /></a>
-              </h3>
+              <div class="header-media-icons">
+                <Icons windowWidth={this.state.width} />
+              </div>
             </div>
           </section>
 
@@ -64,10 +91,7 @@ class App extends Component {
 
                   <h2>Interests</h2>
                     <div class="interest-icon-div story-div">
-                      <div class="icon-div"><span>Reading</span><Icon circular color="blue" size='huge' name='book' /></div>
-                      <div class="icon-div"><span>Drinking Coffee</span><Icon circular color="brown" size='huge' name='coffee' /></div>
-                      <div class="icon-div"><span>Playing Chess</span><Icon circular color="grey" size='huge' name='chess' /></div>
-                      <div class="icon-div"><span>Sports, Mostly Basketball</span><Icon circular color='orange' size='huge' name='basketball ball' /></div> 
+                      <InterestIcons windowWidth={this.state.width} />
                     </div>
                   <h2>Idols</h2>
                     <div class="idols-div story-div">
@@ -142,7 +166,7 @@ This is because when you assign the second variable to the first, you are actual
                           <Form.Field required>
                           <label>Message</label>
                           <TextArea  style={{ marginTop: "1%" }} placeholder='Message' />
-                          <Button style={{ marginTop: "3%" }} size="big" type='submit'>Submit</Button>
+                          <span class="submit-button"><Button style={{ marginTop: "3%" }}  size="big" type='submit'>Submit</Button></span>
                           </Form.Field>
                         </Form>
                     </div>    

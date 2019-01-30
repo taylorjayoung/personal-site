@@ -69,25 +69,29 @@ code {
 
 .home-div {
   text-align: center;
-  margin-top: 23%;
+  position: fixed;
+  margin-top: 18%;
   background-color: grey;
   opacity: .9;
-  height: 30%;
+  height: 23vw;
   justify-content: center;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
 .header {
   color: white;
-  font-size: 9em;
+  font-size: 9.5vw;
+  margin-bottom: 3vw;
   font-family: 'Staatliches', "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
 }
 
 .header-media-icons {
-  width: 40%;
+  position: relative;
+  width: 50%;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -99,20 +103,25 @@ code {
 
 
 .header-media-icons a {
+  display: flex;
+  height: 85%;
+  margin-top: 8%;
   float: left;
-  margin-left: 4%;
-  margin-right: 4%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 #navbar-container {
       width: 100%;
-      height: 5%;
+      height: 4.5vw;
       margin-left: auto;
       margin-right: auto;
       position: fixed;
       z-index: 10;
       transition: top 0.3s;
-      background: beige url(./resources/satin-nuss.jpg) center center no-repeat;
+      background: brown url(./resources/satin-nuss.jpg) center center no-repeat;
       background-size: cover;
 
     }
@@ -133,7 +142,7 @@ code {
   text-decoration: none;
   padding-left: 3%;
   padding-right: 3%;
-  font-size: 3rem;
+  font-size: 3vw;
   color: white;
   font-family: 'Staatliches';
   margin-left: auto;
@@ -209,10 +218,10 @@ code {
 
 
 .main-story-section h2 {
-  font-size: 6em;
+  font-size: 9vh;
   margin-top: 6%;
   font-family:  "Libre Barcode 128 Text", "Roboto", "Staatliches", "Thasadith", "ZCOOL QingKe HuangYou", "Coiny", 'Arvo';
-  color: white;
+  color: black;
 }
 
 .story-div {
@@ -220,23 +229,20 @@ code {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  height: 15%;
+  height: 15vh;
   width: 85%;
   border-radius: 10px;
 }
 
 .devicon {
-  font-size: 5em;
+  font-size: 10vh;
   display: flex;
   margin: auto;
 }
 
 .interest-icon-div {
-  width: 60%;
-}
-
-.interest-icon-div {
-  height: 12%;
+  width: 80%;
+  height: 10vw;
 }
 
 
@@ -269,6 +275,8 @@ code {
 
 .icon-div  {
   display: flex;
+  width: 24%;
+  height: 100%;
   float: left;
   margin-left: auto;
   margin-right: auto;
@@ -696,5 +704,14 @@ Section
   sans-serif;
   margin-bottom: 1%;
 
+
+}
+
+.submit-button {
+  display: flex !important;
+  float: right !important;
+}
+
+@media screen and (max-width: 1370px){
 
 }
