@@ -19,5 +19,7 @@
   "bugs": {
     "url": "https://github.com/taylorjayoung/personal-site/issues"
   },
-  "homepage": "https://github.com/taylorjayoung/personal-site#readme"
-}
+  "homepage": "https://github.com/taylorjayoung/personal-site#readme",
+"scripts": {
+  "start": "node your-script.js"
+}}
