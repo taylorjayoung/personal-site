@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,5 @@
   "bugs": {
     "url": "https://github.com/taylorjayoung/personal-site/issues"
   },
-  "homepage": "https://github.com/taylorjayoung/personal-site#readme",
-"scripts": {
-  "start": "node your-script.js"
-}}
+  "homepage": "https://github.com/taylorjayoung/personal-site#readme"
+}
