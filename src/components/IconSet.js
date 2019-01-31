@@ -43,18 +43,25 @@ import {Button, Checkbox, Form, Icon, TextArea} from 'semantic-ui-react'
      
     determineIconSize = () => {
         if(this.props.windowWidth < 370){
+            console.log(this.props.windowWidth)
             return this.TinyIcons
         }
 
         else if(this.props.windowWidth < 600) {
+            console.log(this.props.windowWidth)
+
             return this.SmallIcons
         }
 
         else if (this.props.windowWidth <1200){
+            console.log(this.props.windowWidth)
+
             return this.BigIcons
         }
 
         else if (this.props.windowWidth >1200){
+            console.log(this.props.windowWidth)
+
             return this.HugeIcons
         }
     }

@@ -236,7 +236,7 @@ code {
 }
 
 .devicon {
-  font-size: 10vh;
+  font-size: 5vw;
   display: flex;
   margin: auto;
 }
@@ -498,7 +498,7 @@ Start*/
 }
 
 .main-blog-article p {
-  font-size: 3vh;
+  font-size: 2vw;
   color: white;
 }
 .main-blog-article h2:hover {
@@ -522,6 +522,8 @@ Start*/
 
 .secondary-blog-articles p {
   color: white;
+  font-size: 2vw;
+
   max-height: 100%;
 }
 .secondary-blog-articles h2:hover {
@@ -552,6 +554,21 @@ Section
 Start
 */
 
+
+
+
+#contact-container {
+  box-sizing: border-box;
+  background: black;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  height: 40w
+}
+
+
+
 .contactInfoBoxParent {
   width: 40%;
 }
@@ -563,8 +580,10 @@ section {
 
 #contact {
   background-color: black;
-  height: 100%;
+  height: 40vw;
 }
+
+
 
 div {
   height: 100%;
@@ -575,10 +594,10 @@ div {
 .contact-content-container {
   display: flex;
   padding: 4%;
-  background-color: gray;
+  background-color: black;
   box-sizing: border-box;
   justify-content: center;
-  width: 80vw;
+  width: 70vw;
   height: 45vw;
   border-radius: 5px;
 
@@ -602,15 +621,10 @@ div {
   float: left;
   padding-left: 4%;
   margin-left: 4%;
-  width: 80%;
+  width: 95%;
   border-radius: 5px;
 
 }
-
-.contactMainTextDiv {
-  
-}
-
 
 input{
   float: left;
@@ -624,18 +638,29 @@ label{
 
 form {
   display: flex;
+  padding: 2%;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
 }
 
-#contact-container {
-  box-sizing: border-box;
+
+.contactForm {
+  height: 40vw;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  justify-content: center;
-  padding-top: 5%;
+  overflow-y: scroll;
+  background: black;
+  width: 50vw;  
+  border-radius: 20px;
+  padding: 3%;
+} 
+
+
+.submit-button {
+  display: flex !important;
+  float: right !important;
 }
 
 /*
@@ -656,24 +681,52 @@ Section
 
  footer {
    width: 100%;
-   height: 19%;
+   height: 29%;
    padding-top: 4%;
    background-color: black;
    float: left;
  }
 
  #footer-div {
+   border: pink 5px solid;
    margin-left: auto;
    margin-right: auto;
+   justify-content: center;
+   display: flex;
+   flex-wrap: wrap;
+   padding-top: 3%;
  }
 
 .social {
    width: 90%;
-   height: 80%;
+   height: 10vw;
    margin-left: auto;
    margin-right: auto;
    display: flex;
    justify-content: center;
+  }
+
+  .stay-connected-div {
+    padding-top: 7vw;
+    height: 10vw;
+    background-color: white;
+    margin-left:auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+  }
+
+  .stay-connected-div h1 {
+    font-size: 5vw;
+    color: grey;
+    text-align: center;
+    font-family: 'Staatliches',
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
   }
 
  i {
@@ -683,37 +736,7 @@ Section
   padding-left: 2%;
 }
 
-.contact {
-  background-color: black;
-  margin-left:auto;
-  margin-right: auto;
-  text-align: center;
-  width: 100%;
 
-}
-
-.contact h1 {
-  font-size: 40px;
-  color: grey;
-  text-align: center;
-  font-family: 'Staatliches',
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
-  margin-bottom: 1%;
-
-
-}
-
-.contactForm {
-  height: 50%;
-  overflow-y: scroll;
-  background: white;
-  border-radius: 20px;
-  padding: 3%;
-  float: left;
-}
-
-.submit-button {
-  display: flex !important;
-  float: right !important;
+.message-div {
+  background-color: red;
 }

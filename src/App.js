@@ -5,6 +5,8 @@ import Slideshow from './components/Carousel';
 import {Button, Checkbox, Form, Icon, TextArea} from 'semantic-ui-react'
 import Icons from './components/IconSet'
 import InterestIcons from './components/InterestIcons'
+import InputForm from './components/Form'
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -154,21 +156,7 @@ This is because when you assign the second variable to the first, you are actual
                   <div class="contactMainTextDiv">
                   <h1>Get in Touch</h1>
                     <div class="contactForm">
-                      <Form size={"huge"} >
-                        <Form.Field width={12} >
-                            <label>Name</label>
-                            <input placeholder='Name' />
-                          </Form.Field>
-                          <Form.Field width={12} required>
-                            <label>Email</label>
-                            <input placeholder='Email' />
-                          </Form.Field>
-                          <Form.Field required>
-                          <label>Message</label>
-                          <TextArea  style={{ marginTop: "1%" }} placeholder='Message' />
-                          <span class="submit-button"><Button style={{ marginTop: "3%" }}  size="big" type='submit'>Submit</Button></span>
-                          </Form.Field>
-                        </Form>
+                      <InputForm windowWidth={this.state.width} />
                     </div>    
                  </div>
                 </div>
@@ -177,18 +165,12 @@ This is because when you assign the second variable to the first, you are actual
           </section>
         <footer>
           <div id="footer-div">
-            <div class="social">
-              <h3>
-                <a href="https://github.com/taylorjayoung?tab=repositories" target="_none"><Icon inverted  color='black' name='github huge  link icon' /></a>
-                 <a href="https://www.linkedin.com/in/taylor-j-young/" target="_none"><Icon inverted color='blue' name='linkedin huge link icon' /></a>
-                 <a href="https://medium.com/@taylorjayoung" target="_none"><Icon inverted color='black' name='medium huge link icon' /></a>
-                 <a href="https://stackoverflow.com/users/10881188/t-young" target="_none"><Icon inverted color='orange' name='stack overflow huge link icon' /></a>
-              </h3>
-            </div>
-            <div class="contact">
+            <div class="stay-connected-div">
               <h1>-Stay Connected-</h1>
             </div>
-
+            <div class="social">
+              <Icons windowWidth={this.state.width} />
+            </div>
           </div>
         </footer>
       </div>
