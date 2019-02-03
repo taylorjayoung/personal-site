@@ -18,23 +18,16 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('MOUNT')
-    console.log('--------------------')
+
     this.updateWindowDimensions()
     window.addEventListener('resize', this.updateWindowDimensions)
   }
 
   componentWillUnmount(){
-    console.log('UNMOUNT')
-    console.log('--------------------')
     window.removeEventListener('resize')
   }
 
   updateWindowDimensions(){
-    console.log('update window dimensions')
-    console.log('--------------------')
-    console.log(window.innerHeight, window.innerWidth)
-
     this.setState({width: window.innerWidth, height: window.innerHeight})
   }
 
@@ -111,6 +104,7 @@ class App extends Component {
 
           <section id="projects">             
             <div class="project-container">    
+              <h1 class="project-header">Click Icon To Visit App <br></br> Click Dots At Bottom To Scroll</h1>
               <div class="carousel-container"> 
               <Slideshow />
               </div>
@@ -150,19 +144,20 @@ This is because when you assign the second variable to the first, you are actual
           </section>
 
           <section id="contact">
+              <h1>-Get in Touch-</h1>
             <div id="contact-container">
-              <div class="contact-content-container">
-                <div class= "contactInfoBox">
-                  <div class="contactMainTextDiv">
-                  <h1>Get in Touch</h1>
-                    <div class="contactForm">
-                      <InputForm windowWidth={this.state.width} />
-                    </div>    
-                 </div>
-                </div>
+              
+       
+            
+               <div class="contact-content-container">
+                <div class="contactForm">
+                  <InputForm windowWidth={this.state.width} />
+                </div>    
               </div>
             </div>
+
           </section>
+
         <footer>
           <div id="footer-div">
             <div class="stay-connected-div">
