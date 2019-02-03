@@ -6,10 +6,40 @@ class InputForm extends Component {
     constructor(props){
         super(props)
         this.state = {
-            width: this.props.windowWidth
+            width: this.props.windowWidth,
+            name: '',
+            email: '',
+            message: ''
         }
     }
 
+    nameHandler = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
+    emailHandler = (event) => {
+        this.setState({
+            email: event.target.value
+        })
+    }
+
+    messageHandler = (event) => {
+        this.setState({
+            message: event.target.value
+        })
+    }
+    submitHandler = () => {
+
+        let form = document.createElement('form')
+        form.action = "https://formspree.io/taylorjayoung@gmail.com"
+        form.method =  "POST"
+        form.innerHTML =  
+       ` <input name="name" value=${this.state.name}><input name="email" value= ${this.state.email}><input name="message" value=${this.state.message}>`
+        document.body.append(form)
+        form.submit()
+    }
 
      sizeChecker = (width) => {
          switch(width){
@@ -20,11 +50,11 @@ class InputForm extends Component {
                 return "small"
             
 
-            case(width <1000):
+            case(width <900):
                 return "large"
             
 
-            case(width >1000):
+            case(width >900):
                 return "huge"
             
             default:
@@ -38,16 +68,16 @@ class InputForm extends Component {
           <div class="name-email-div">
             <Form size={this.sizeChecker(this.props.windowWidth)} >
                 <div class="contact-name-div">
-                    <Form.Field width={12} >
+                    <Form.Field width={12} required >
                         <label style={{color:"black"}}>Name</label>
-                        <input placeholder='Name' />
+                        <input onChange={(event) => this.nameHandler(event)} placeholder='Name' />
                     </Form.Field>
                 </div>
             
                 <div class="contact-email-div">
                     <Form.Field width={12} required>
                         <label style={{color:"black"}}>Email</label>
-                        <input placeholder='Email' />
+                        <input onChange={(event) => this.emailHandler(event)} placeholder='Email' />
                     </Form.Field>
                 </div>       
             </Form>
@@ -56,9 +86,9 @@ class InputForm extends Component {
         <div class="message-div">
             <Form size={this.sizeChecker(this.props.windowWidth)}>
                 <Form.Field required>
-                    <label style={{color:"black"}}>Message</label>
-                    <TextArea  style={{ marginTop: "1%" }} placeholder='Message' />
-                    <span class="submit-button"><Button style={{ marginTop: "3%" }}  size={this.sizeChecker(this.props.windowWidth)} type='submit'>Submit</Button></span>
+                    <label style={{color:"black"} }>Message</label>
+                    <TextArea onChange={(event) => this.messageHandler(event)} style={{ marginTop: "1%" }} placeholder='Message' />
+                    <span class="submit-button"><Button style={{ marginTop: "3%" }}  size={this.sizeChecker(this.props.windowWidth)} type='submit' onClick={()=>this.submitHandler()} >Submit</Button></span>
                 </Form.Field>
              </Form>
         </div>
